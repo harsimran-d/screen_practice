@@ -17,6 +17,18 @@ class ScreensListview extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
+      body: ListView.builder(
+          itemCount: screens.length,
+          itemBuilder: (context, index) {
+            final screen = screens[index];
+            return ListTile(
+              title: Text(screen.appName),
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => screen.widget));
+              },
+            );
+          }),
     );
   }
 }
