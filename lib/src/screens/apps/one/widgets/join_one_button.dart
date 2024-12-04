@@ -5,7 +5,7 @@ class JoinOneButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Ink(
       height: 54,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -13,6 +13,8 @@ class JoinOneButton extends StatelessWidget {
         color: Colors.white,
       ),
       child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        splashColor: const Color(0xFFDDDDDD),
         onTap: () {},
         child: const Center(
           child: Text(
