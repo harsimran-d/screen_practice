@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:screen_practice/src/screens/apps/one/one_welcome_screen.dart';
+import 'package:screen_practice/src/screens/apps/netflix/netflix_onboarding_screen.dart';
+
+import 'apps/one/one_welcome_screen.dart';
 
 part 'screens.dart';
 
@@ -13,10 +15,6 @@ class Category {
 }
 
 final List<Category> categories = [
-  Category(title: "Welcome & Get Started", screens: [
-    Screen(
-      appName: "One",
-      widget: const OneWelcomeScreen(),
-    ),
-  ]),
+  Category(title: "Welcome & Get Started", screens: _kWelcomeScreens),
+  Category(title: "Onboarding", screens: _kOnBoardingScreens),
 ];
